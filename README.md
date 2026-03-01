@@ -11,7 +11,8 @@
 <p align="center">
   <a href="https://learn.neuman.dev"><img src="https://img.shields.io/badge/🌐_Visit-learn.neuman.dev-3b82f6?style=for-the-badge" alt="Live Site" /></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT License" /></a>&nbsp;
-  <a href="https://learn.neuman.dev/courses/python"><img src="https://img.shields.io/badge/🐍_Python-274_Projects-3776AB?style=for-the-badge" alt="Python Course" /></a>
+  <a href="https://learn.neuman.dev/courses/python"><img src="https://img.shields.io/badge/🐍_Python-274_Projects-3776AB?style=for-the-badge" alt="Python Course" /></a>&nbsp;
+  <a href="https://github.com/travisjneuman/ndev.learn/actions/workflows/deploy.yml"><img src="https://github.com/travisjneuman/ndev.learn/actions/workflows/deploy.yml/badge.svg" alt="Deploy" /></a>
 </p>
 
 <br />
@@ -19,6 +20,24 @@
 ## 20 courses. 3 categories. Zero to mastery.
 
 Every course page is a **complete learning roadmap** — hand-picked resources organized from beginner to advanced so you always know exactly where to start and what comes next.
+
+### Why ndev.learn?
+
+- **One place, every resource** — a curated map of the best free learning materials across the internet
+- **Structured for progression** — ordered beginner → advanced with a step-by-step roadmap
+- **Free and open** — no paywalls, no ads, MIT licensed (accounts coming later for progress tracking)
+- **Actively maintained** — new resources added, dead links removed, community contributions welcome
+
+### Where to Start
+
+| I want to... | Start here |
+|---|---|
+| Learn my first programming language | [Python](https://learn.neuman.dev/courses/python) |
+| Build websites and web apps | [JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) |
+| Work with data and AI | [Data Science](https://learn.neuman.dev/courses/data-science) → [AI & ML](https://learn.neuman.dev/courses/ai-ml) |
+| Get a DevOps / cloud job | [Linux](https://learn.neuman.dev/courses/linux) → [Git](https://learn.neuman.dev/courses/git) → [DevOps](https://learn.neuman.dev/courses/devops) |
+| Break into cybersecurity | [Linux](https://learn.neuman.dev/courses/linux) → [Cybersecurity](https://learn.neuman.dev/courses/cybersecurity) |
+| Create content (video / audio / photo) | Pick your medium in [Creative Production](#creative-production) below |
 
 > **How it works:** Pick a topic. Follow the roadmap. Each section is collapsible so you can focus on what matters to you — official docs, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and development tools.
 
@@ -118,6 +137,17 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 <br />
 
+## What's Coming Next
+
+This project is actively growing. Here's what's on the roadmap:
+
+- **JavaScript & TypeScript** — the next fully active course (in development)
+- **More project-based courses** — expanding depth across all 20 topics
+- **Progress tracking & user accounts** — save your place, track completions
+- **In-browser code editor** — practice without leaving the site
+
+<br />
+
 ---
 
 <br />
@@ -129,5 +159,9 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 </p>
 
 <p align="center">
-  <sub>MIT License — Built by <a href="https://travisjneuman.com">Travis Neuman</a></sub>
+  If this helped you, consider giving it a <strong>star</strong> — it helps others find these resources too.
+</p>
+
+<p align="center">
+  <sub>MIT License — Built by <a href="https://travisjneuman.com">Travis Neuman</a> · <a href="https://learn.neuman.dev">learn.neuman.dev</a></sub>
 </p>
