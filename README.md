@@ -1,93 +1,83 @@
-# Neuman Learn
+# ndev.learn
 
-**Free, open-source programming courses. Learn by building real projects.**
+**Learn programming, technical skills, and creative production — for free.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Built with Astro](https://img.shields.io/badge/Built_with-Astro-ff5a03.svg)](https://astro.build)
-[![Deployed on Cloudflare](https://img.shields.io/badge/Deployed_on-Cloudflare-f38020.svg)](https://learn.neuman.dev)
+[![Live Site](https://img.shields.io/badge/🌐_Visit-learn.neuman.dev-3b82f6?style=for-the-badge)](https://learn.neuman.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=for-the-badge)](LICENSE)
 
 ---
 
-## Overview
+## What is ndev.learn?
 
-Neuman Learn is a multi-course learning platform where every concept is taught through hands-on projects. No video lectures, no quizzes — just real code, real tests, and real skills.
+A curated learning platform with **20 courses** spanning three categories — each one packed with the best free resources, tools, and learning paths to take you from zero to mastery.
 
-**Live:** [learn.neuman.dev](https://learn.neuman.dev)
+Every coming-soon course page is a **complete learning roadmap** with hand-picked resources: official documentation, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and tools — all organized from beginner to advanced so you know exactly where to start.
 
-### Available Courses
+---
 
-| Course | Projects | Status |
-|--------|----------|--------|
-| [Learn Python](https://github.com/travisjneuman/learn.python) | 274 projects, 13 levels, 12 modules | Active |
-| Learn TypeScript | — | Coming Soon |
-| Learn Go | — | Coming Soon |
+## 📚 Courses
 
-## Tech Stack
+### Programming Languages
 
-- **Framework:** [Astro](https://astro.build) with TypeScript
-- **Styling:** [Tailwind CSS 4](https://tailwindcss.com)
-- **Interactive:** [React 19](https://react.dev) (islands architecture)
-- **Deployment:** [Cloudflare Workers](https://workers.cloudflare.com)
-- **Theme:** Adaptive dark/light with system preference detection
+| Course | Description |
+|--------|-------------|
+| **[Learn Python](https://learn.neuman.dev/courses/python)** | Zero to production in 274 hands-on projects — **Active** |
+| [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
+| [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
+| [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
+| [Learn Rust](https://learn.neuman.dev/courses/rust) | Memory-safe systems programming and WebAssembly |
+| [Learn Go](https://learn.neuman.dev/courses/go) | Cloud-native services, CLIs, and concurrent systems |
+| [Learn Dart & Flutter](https://learn.neuman.dev/courses/dart) | Cross-platform mobile, web, and desktop apps |
+| [Learn Swift](https://learn.neuman.dev/courses/swift) | iOS, macOS, and Apple platform development |
+| [Learn Kotlin](https://learn.neuman.dev/courses/kotlin) | Android, multiplatform, and JVM development |
+| [Learn PowerShell](https://learn.neuman.dev/courses/powershell) | Windows automation, scripting, and system administration |
 
-## Getting Started
+### Technical Skills
 
-### Prerequisites
+| Course | Description |
+|--------|-------------|
+| [Learn SQL & Databases](https://learn.neuman.dev/courses/sql) | Query, design, and optimize relational databases |
+| [Learn Linux & Command Line](https://learn.neuman.dev/courses/linux) | Navigate, script, and administer Unix systems |
+| [Learn Git & Version Control](https://learn.neuman.dev/courses/git) | Branch, merge, and collaborate with confidence |
+| [Learn DevOps & Cloud](https://learn.neuman.dev/courses/devops) | Docker, CI/CD, and infrastructure as code |
+| [Learn Data Science](https://learn.neuman.dev/courses/data-science) | Analyze, visualize, and model real-world data |
+| [Learn AI & Machine Learning](https://learn.neuman.dev/courses/ai-ml) | Neural networks, LLMs, and intelligent applications |
+| [Learn Cybersecurity](https://learn.neuman.dev/courses/cybersecurity) | Defend systems, find vulnerabilities, think like an attacker |
 
-- Node.js 20+
-- npm 10+
+### Creative Production
 
-### Development
+| Course | Description |
+|--------|-------------|
+| [Learn Video Production](https://learn.neuman.dev/courses/video) | Shoot, edit, and publish professional video content |
+| [Learn Audio Production](https://learn.neuman.dev/courses/audio) | Record, mix, and master music and podcasts |
+| [Learn Photography & Design](https://learn.neuman.dev/courses/photography) | Capture, edit, and create stunning visual content |
 
-```bash
-git clone https://github.com/travisjneuman/ndev.learn.git
-cd ndev.learn
-npm install
-npm run dev
-```
+---
 
-The dev server starts at [http://localhost:4321](http://localhost:4321).
+## 🗺️ How Each Course Works
 
-### Commands
+Every course page includes a structured learning path with:
 
-| Command | Action |
-|---------|--------|
-| `npm run dev` | Start dev server |
-| `npm run build` | Production build |
-| `npm run preview` | Preview production build |
-| `npx astro check` | TypeScript type checking |
+1. **Start Here — Learning Roadmap** — A step-by-step path from beginner to mastery
+2. **Official Documentation** — Primary sources and language references
+3. **GitHub Awesome Lists** — Community-curated collections of the best tools and resources
+4. **Interactive Courses** — Free hands-on platforms, university MOOCs, and coding challenges
+5. **Video Courses & YouTube** — Structured playlists and top creator channels
+6. **Books** — Free online books and essential paid references
+7. **Community & News** — Forums, newsletters, and ecosystem resources
+8. **Tools & Environments** — IDEs, playgrounds, and development tools
 
-## Project Structure
+Sections are collapsible so you can focus on what matters to you. The roadmap opens first to guide your journey.
 
-```
-ndev.learn/
-├── public/images/courses/    # Course SVG icons
-├── src/
-│   ├── pages/                # Astro page routes
-│   │   ├── index.astro       # Landing page
-│   │   ├── about.astro       # About page
-│   │   └── courses/[slug]    # Dynamic course detail pages
-│   ├── layouts/Base.astro    # Root layout with theme system
-│   ├── components/           # Astro + React components
-│   ├── content/courses/      # Course data (Content Collections)
-│   ├── lib/types.ts          # Shared TypeScript types
-│   └── styles/global.css     # Tailwind + CSS variable tokens
-├── astro.config.ts
-├── wrangler.jsonc
-└── package.json
-```
+---
 
-## Adding a Course
+## 🟢 Active Courses
 
-1. Create `src/content/courses/<slug>.md` with the required frontmatter schema
-2. Add a course icon SVG to `public/images/courses/<slug>.svg`
-3. The course automatically appears on the landing page and gets its own detail page
+**[Learn Python](https://learn.neuman.dev/courses/python)** is the first fully developed ndev.learn course — 274 projects across 13 levels, 12 modules, and 34 concept guides. Every concept is taught by building real projects with test suites to verify your work.
 
-See `src/content/config.ts` for the frontmatter schema.
+All other courses are currently **coming soon** with curated resource pages available now. Each one is a comprehensive learning guide you can start using today while the full project-based curriculum is being developed.
 
-## Contributing
-
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+---
 
 ## License
 
