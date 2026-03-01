@@ -6,22 +6,11 @@ const courses = (await getCollection('courses')).sort(
   (a, b) => a.data.order - b.data.order
 );
 
-const categories = [
-  {
-    key: 'programming',
-    title: 'Programming Languages',
-    description: 'Master a language from zero to production. Each course is project-based and self-paced.',
-  },
-  {
-    key: 'technical',
-    title: 'Technical Skills',
-    description: 'Essential tools and disciplines every developer needs beyond writing code.',
-  },
-  {
-    key: 'creative',
-    title: 'Creative Production',
-    description: 'Create professional visual and audio content with industry-standard tools.',
-  },
+const filters = [
+  { key: 'all', label: 'All' },
+  { key: 'programming', label: 'Programming' },
+  { key: 'technical', label: 'Technical' },
+  { key: 'creative', label: 'Creative' },
 ] as const;
 ---
 
@@ -34,48 +23,72 @@ const categories = [
       Available Courses
     </h2>
     <p
-      class="text-center mb-16 max-w-xl mx-auto"
+      class="text-center mb-10 max-w-xl mx-auto"
       style="color: var(--color-text-muted);"
     >
       Project-based curricula designed for hands-on learning. Start from zero, build real things.
     </p>
 
-    {categories.map((cat) => {
-      const catCourses = courses.filter((c) => c.data.category === cat.key);
-      return catCourses.length > 0 ? (
-        <div class="mb-16 last:mb-0">
-          <div class="mb-6">
-            <h3
-              class="text-2xl font-bold mb-1"
-              style="color: var(--color-text);"
-            >
-              {cat.title}
-              <span
-                class="text-sm font-normal ml-2"
-                style="color: var(--color-text-subtle);"
-              >
-                {catCourses.length} {catCourses.length === 1 ? 'course' : 'courses'}
-              </span>
-            </h3>
-            <p class="text-sm" style="color: var(--color-text-muted);">
-              {cat.description}
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {catCourses.map((course) => (
-              <CourseCard
-                title={course.data.title}
-                subtitle={course.data.subtitle}
-                slug={course.id.replace(/\.md$/, '')}
-                status={course.data.status}
-                icon={course.data.icon}
-                color={course.data.color}
-                stats={course.data.stats}
-              />
-            ))}
-          </div>
+    <div class="flex justify-center gap-2 mb-10 flex-wrap" id="course-filters">
+      {filters.map((f) => (
+        <button
+          class="filter-btn px-4 py-2 text-sm font-medium rounded-lg transition-colors"
+          data-filter={f.key}
+          style={f.key === 'all'
+            ? 'background-color: var(--color-accent-blue); color: #fff;'
+            : 'background-color: var(--color-bg-muted); color: var(--color-text-muted);'
+          }
+        >
+          {f.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="course-grid">
+      {courses.map((course) => (
+        <div data-category={course.data.category}>
+          <CourseCard
+            title={course.data.title}
+            subtitle={course.data.subtitle}
+            slug={course.id.replace(/\.md$/, '')}
+            status={course.data.status}
+            icon={course.data.icon}
+            color={course.data.color}
+            stats={course.data.stats}
+          />
         </div>
-      ) : null;
-    })}
+      ))}
+    </div>
   </div>
 </section>
+
+<script is:inline>
+  (function () {
+    const buttons = document.querySelectorAll('#course-filters .filter-btn');
+    const cards = document.querySelectorAll('#course-grid > [data-category]');
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var filter = btn.getAttribute('data-filter');
+
+        buttons.forEach(function (b) {
+          if (b === btn) {
+            b.style.backgroundColor = 'var(--color-accent-blue)';
+            b.style.color = '#fff';
+          } else {
+            b.style.backgroundColor = 'var(--color-bg-muted)';
+            b.style.color = 'var(--color-text-muted)';
+          }
+        });
+
+        cards.forEach(function (card) {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+</script>
