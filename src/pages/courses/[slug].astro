@@ -511,9 +511,10 @@ const isActive = status === 'active';
       sections.push({ h2: h2, content: contentDiv });
     });
 
-    // Add expand/collapse all controls if there are sections
+    // Build expand/collapse controls (inserted into DOM below after layout is finalized)
+    var controls = null;
     if (sections.length > 1) {
-      var controls = document.createElement('div');
+      controls = document.createElement('div');
       controls.style.cssText = 'display:flex;justify-content:flex-end;gap:0.75rem;margin-bottom:1rem;margin-top:1.25rem;';
 
       var btnBase = 'font-size:0.8125rem;font-weight:600;padding:0.5rem 1.25rem;border-radius:0.5rem;cursor:pointer;border:none;transition:all 0.2s ease;';
@@ -544,14 +545,9 @@ const isActive = status === 'active';
 
       controls.appendChild(expandBtn);
       controls.appendChild(collapseBtn);
-
-      // Insert controls before the first section h2
-      if (sections[0]) {
-        sections[0].h2.parentNode.insertBefore(controls, sections[0].h2);
-      }
     }
 
-    // For active courses: move CTAs above resource sections and add a resources header
+    // For active courses: move CTAs above resource sections, add resources header, then controls
     if (!isComingSoon && sections.length > 0) {
       var ctaBlock = document.getElementById('course-ctas');
       var firstResourceH2 = sections[0].h2;
@@ -566,7 +562,7 @@ const isActive = status === 'active';
         // Move CTA block before the first resource heading
         firstResourceH2.parentNode.insertBefore(ctaBlock, firstResourceH2);
 
-        // Inject a "More Resources" section header between CTAs and resource sections
+        // Inject a "More Resources" section header
         var resHeader = document.createElement('div');
         resHeader.style.cssText = 'margin-top:3rem;margin-bottom:0.25rem;padding-top:2rem;border-top:1px solid var(--color-border);';
 
@@ -580,10 +576,16 @@ const isActive = status === 'active';
 
         resHeader.appendChild(resTitle);
         resHeader.appendChild(resDesc);
-
-        // Insert header before the expand/collapse controls (or first resource h2)
         firstResourceH2.parentNode.insertBefore(resHeader, firstResourceH2);
+
+        // Insert expand/collapse controls after the header, before resource sections
+        if (controls) {
+          firstResourceH2.parentNode.insertBefore(controls, firstResourceH2);
+        }
       }
+    } else if (controls && sections[0]) {
+      // Coming-soon pages: controls go directly before first resource section
+      sections[0].h2.parentNode.insertBefore(controls, sections[0].h2);
     }
 
     // Open all external links in new tab (only within resource sections)
