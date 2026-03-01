@@ -1,6 +1,6 @@
 {
 	"main": "dist/_worker.js/index.js",
-	"name": "ndev.learn",
+	"name": "ndev-learn",
   "compatibility_date": "2026-03-01",
   "compatibility_flags": [
     "nodejs_compat",
