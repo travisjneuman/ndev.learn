@@ -113,6 +113,7 @@ const isActive = status === 'active';
 
       <!-- CTAs -->
       <div
+        id="course-ctas"
         class="mt-12 pt-8 flex flex-col sm:flex-row gap-4"
         style="border-top: 1px solid var(--color-border);"
       >
@@ -547,6 +548,41 @@ const isActive = status === 'active';
       // Insert controls before the first section h2
       if (sections[0]) {
         sections[0].h2.parentNode.insertBefore(controls, sections[0].h2);
+      }
+    }
+
+    // For active courses: move CTAs above resource sections and add a resources header
+    if (!isComingSoon && sections.length > 0) {
+      var ctaBlock = document.getElementById('course-ctas');
+      var firstResourceH2 = sections[0].h2;
+
+      if (ctaBlock && firstResourceH2) {
+        // Remove bottom-of-page border styling, add spacing instead
+        ctaBlock.style.borderTop = 'none';
+        ctaBlock.style.paddingTop = '0';
+        ctaBlock.style.marginTop = '2.5rem';
+        ctaBlock.style.marginBottom = '0';
+
+        // Move CTA block before the first resource heading
+        firstResourceH2.parentNode.insertBefore(ctaBlock, firstResourceH2);
+
+        // Inject a "More Resources" section header between CTAs and resource sections
+        var resHeader = document.createElement('div');
+        resHeader.style.cssText = 'margin-top:3rem;margin-bottom:0.25rem;padding-top:2rem;border-top:1px solid var(--color-border);';
+
+        var resTitle = document.createElement('h2');
+        resTitle.textContent = 'More Resources';
+        resTitle.style.cssText = 'font-size:1.5rem;font-weight:700;color:var(--color-text);margin:0 0 0.5rem 0;';
+
+        var resDesc = document.createElement('p');
+        resDesc.textContent = 'Curated links to the best free learning materials across the internet.';
+        resDesc.style.cssText = 'font-size:0.9375rem;color:var(--color-text-subtle);margin:0;line-height:1.6;';
+
+        resHeader.appendChild(resTitle);
+        resHeader.appendChild(resDesc);
+
+        // Insert header before the expand/collapse controls (or first resource h2)
+        firstResourceH2.parentNode.insertBefore(resHeader, firstResourceH2);
       }
     }
 
