@@ -141,7 +141,6 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 This project is actively growing. Here's what's on the roadmap:
 
-- **JavaScript & TypeScript** — the next fully active course (in development)
 - **More project-based courses** — expanding depth across all 20 topics
 - **Progress tracking & user accounts** — save your place, track completions
 - **In-browser code editor** — practice without leaving the site
