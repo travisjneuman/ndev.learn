@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 
 const { course } = Astro.props;
 const { Content } = await course.render();
-const { title, subtitle, status, github, icon, color, stats, tags } = course.data;
+const { title, subtitle, status, url, github, icon, color, stats, tags } = course.data;
 const isActive = status === 'active';
 ---
 
@@ -118,22 +118,20 @@ const isActive = status === 'active';
         {isActive ? (
           <>
             <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={url}
               class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg no-underline transition-colors"
               style={`background-color: ${color}; color: #fff;`}
             >
-              Start on GitHub
+              Start Learning
             </a>
             <a
-              href="https://travisjneuman.github.io/learn.python"
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg no-underline transition-colors"
               style="border: 1px solid var(--color-border); color: var(--color-text);"
             >
-              View Documentation
+              View on GitHub
             </a>
           </>
         ) : (

@@ -1,6 +1,6 @@
 ---
 title: "Learn Go"
-subtitle: "Build fast, concurrent systems"
+subtitle: "Cloud-native services, CLIs, and concurrent systems"
 status: "coming-soon"
 url: "https://go.learn.neuman.dev"
 github: "https://github.com/travisjneuman/learn.go"
@@ -10,12 +10,12 @@ stats:
   projects: 0
   levels: 0
   modules: 0
-tags: ["Go", "Concurrency", "Systems", "CLI"]
-order: 3
+tags: ["Go", "Cloud-Native", "Concurrency", "CLI", "Kubernetes"]
+order: 6
 ---
 
 ## Coming Soon
 
-A project-based Go curriculum is in development. From basics to building production-grade concurrent systems, CLI tools, and web services.
+The language behind Docker, Kubernetes, and most of the cloud-native ecosystem. Go's simplicity, fast compilation, and first-class concurrency make it ideal for building services, CLIs, and infrastructure tooling.
 
-Stay tuned for updates.
+This course covers Go from fundamentals through goroutines and channels to building production cloud services.
