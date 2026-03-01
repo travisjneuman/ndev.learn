@@ -1,84 +1,133 @@
-# ndev.learn
+<p align="center">
+  <a href="https://learn.neuman.dev">
+    <img src="public/og-image.png" alt="ndev.learn" width="600" />
+  </a>
+</p>
 
-**Learn programming, technical skills, and creative production — for free.**
+<p align="center">
+  <strong>Learn programming, technical skills, and creative production — for free.</strong>
+</p>
 
-[![Live Site](https://img.shields.io/badge/🌐_Visit-learn.neuman.dev-3b82f6?style=for-the-badge)](https://learn.neuman.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-22c55e.svg?style=for-the-badge)](LICENSE)
+<p align="center">
+  <a href="https://learn.neuman.dev"><img src="https://img.shields.io/badge/🌐_Visit-learn.neuman.dev-3b82f6?style=for-the-badge" alt="Live Site" /></a>&nbsp;
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT License" /></a>&nbsp;
+  <a href="https://learn.neuman.dev/courses/python"><img src="https://img.shields.io/badge/🐍_Python-274_Projects-3776AB?style=for-the-badge" alt="Python Course" /></a>
+</p>
 
----
+<br />
 
-## What is ndev.learn?
+## 20 courses. 3 categories. Zero to mastery.
 
-A curated learning platform with **20 courses** spanning three categories — each one packed with the best free resources, tools, and learning paths to take you from zero to mastery.
+Every course page is a **complete learning roadmap** — hand-picked resources organized from beginner to advanced so you always know exactly where to start and what comes next.
 
-Every coming-soon course page is a **complete learning roadmap** with hand-picked resources: official documentation, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and tools — all organized from beginner to advanced so you know exactly where to start.
+> **How it works:** Pick a topic. Follow the roadmap. Each section is collapsible so you can focus on what matters to you — official docs, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and development tools.
 
----
+<br />
 
-## 📚 Courses
+## Programming Languages
 
-### Programming Languages
+> 10 languages from web to systems to mobile — start with fundamentals, build real projects.
 
-| Course | Description |
-|--------|-------------|
-| **[Learn Python](https://learn.neuman.dev/courses/python)** | Zero to production in 274 hands-on projects — **Active** |
-| [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
-| [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
-| [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
-| [Learn Rust](https://learn.neuman.dev/courses/rust) | Memory-safe systems programming and WebAssembly |
-| [Learn Go](https://learn.neuman.dev/courses/go) | Cloud-native services, CLIs, and concurrent systems |
-| [Learn Dart & Flutter](https://learn.neuman.dev/courses/dart) | Cross-platform mobile, web, and desktop apps |
-| [Learn Swift](https://learn.neuman.dev/courses/swift) | iOS, macOS, and Apple platform development |
-| [Learn Kotlin](https://learn.neuman.dev/courses/kotlin) | Android, multiplatform, and JVM development |
-| [Learn PowerShell](https://learn.neuman.dev/courses/powershell) | Windows automation, scripting, and system administration |
+| | Course | What You'll Learn |
+|:---:|--------|-------------------|
+| <img src="public/images/courses/python.svg" width="20" /> | **[Learn Python](https://learn.neuman.dev/courses/python)** | **274 projects across 13 levels** — the first active ndev.learn course |
+| <img src="public/images/courses/javascript.svg" width="20" /> | [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
+| <img src="public/images/courses/csharp.svg" width="20" /> | [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
+| <img src="public/images/courses/java.svg" width="20" /> | [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
+| <img src="public/images/courses/rust.svg" width="20" /> | [Learn Rust](https://learn.neuman.dev/courses/rust) | Memory-safe systems programming and WebAssembly |
+| <img src="public/images/courses/go.svg" width="20" /> | [Learn Go](https://learn.neuman.dev/courses/go) | Cloud-native services, CLIs, and concurrent systems |
+| <img src="public/images/courses/dart.svg" width="20" /> | [Learn Dart & Flutter](https://learn.neuman.dev/courses/dart) | Cross-platform mobile, web, and desktop apps |
+| <img src="public/images/courses/swift.svg" width="20" /> | [Learn Swift](https://learn.neuman.dev/courses/swift) | iOS, macOS, and Apple platform development |
+| <img src="public/images/courses/kotlin.svg" width="20" /> | [Learn Kotlin](https://learn.neuman.dev/courses/kotlin) | Android, multiplatform, and JVM development |
+| <img src="public/images/courses/powershell.svg" width="20" /> | [Learn PowerShell](https://learn.neuman.dev/courses/powershell) | Windows automation, scripting, and system administration |
 
-### Technical Skills
+<br />
 
-| Course | Description |
-|--------|-------------|
-| [Learn SQL & Databases](https://learn.neuman.dev/courses/sql) | Query, design, and optimize relational databases |
-| [Learn Linux & Command Line](https://learn.neuman.dev/courses/linux) | Navigate, script, and administer Unix systems |
-| [Learn Git & Version Control](https://learn.neuman.dev/courses/git) | Branch, merge, and collaborate with confidence |
-| [Learn DevOps & Cloud](https://learn.neuman.dev/courses/devops) | Docker, CI/CD, and infrastructure as code |
-| [Learn Data Science](https://learn.neuman.dev/courses/data-science) | Analyze, visualize, and model real-world data |
-| [Learn AI & Machine Learning](https://learn.neuman.dev/courses/ai-ml) | Neural networks, LLMs, and intelligent applications |
-| [Learn Cybersecurity](https://learn.neuman.dev/courses/cybersecurity) | Defend systems, find vulnerabilities, think like an attacker |
+## Technical Skills
 
-### Creative Production
+> The tools and knowledge that tie everything together — databases, infrastructure, security, and AI.
 
-| Course | Description |
-|--------|-------------|
-| [Learn Video Production](https://learn.neuman.dev/courses/video) | Shoot, edit, and publish professional video content |
-| [Learn Audio Production](https://learn.neuman.dev/courses/audio) | Record, mix, and master music and podcasts |
-| [Learn Photography & Design](https://learn.neuman.dev/courses/photography) | Capture, edit, and create stunning visual content |
+| | Course | What You'll Learn |
+|:---:|--------|-------------------|
+| <img src="public/images/courses/sql.svg" width="20" /> | [Learn SQL & Databases](https://learn.neuman.dev/courses/sql) | Query, design, and optimize relational databases |
+| <img src="public/images/courses/linux.svg" width="20" /> | [Learn Linux & Command Line](https://learn.neuman.dev/courses/linux) | Navigate, script, and administer Unix systems |
+| <img src="public/images/courses/git.svg" width="20" /> | [Learn Git & Version Control](https://learn.neuman.dev/courses/git) | Branch, merge, and collaborate with confidence |
+| <img src="public/images/courses/devops.svg" width="20" /> | [Learn DevOps & Cloud](https://learn.neuman.dev/courses/devops) | Docker, CI/CD, and infrastructure as code |
+| <img src="public/images/courses/data-science.svg" width="20" /> | [Learn Data Science](https://learn.neuman.dev/courses/data-science) | Analyze, visualize, and model real-world data |
+| <img src="public/images/courses/ai-ml.svg" width="20" /> | [Learn AI & Machine Learning](https://learn.neuman.dev/courses/ai-ml) | Neural networks, LLMs, and intelligent applications |
+| <img src="public/images/courses/cybersecurity.svg" width="20" /> | [Learn Cybersecurity](https://learn.neuman.dev/courses/cybersecurity) | Defend systems, find vulnerabilities, think like an attacker |
 
----
+<br />
 
-## 🗺️ How Each Course Works
+## Creative Production
 
-Every course page includes a structured learning path with:
+> Go beyond code — learn to create professional video, audio, and visual content.
 
-1. **Start Here — Learning Roadmap** — A step-by-step path from beginner to mastery
-2. **Official Documentation** — Primary sources and language references
-3. **GitHub Awesome Lists** — Community-curated collections of the best tools and resources
-4. **Interactive Courses** — Free hands-on platforms, university MOOCs, and coding challenges
-5. **Video Courses & YouTube** — Structured playlists and top creator channels
-6. **Books** — Free online books and essential paid references
-7. **Community & News** — Forums, newsletters, and ecosystem resources
-8. **Tools & Environments** — IDEs, playgrounds, and development tools
+| | Course | What You'll Learn |
+|:---:|--------|-------------------|
+| <img src="public/images/courses/video.svg" width="20" /> | [Learn Video Production](https://learn.neuman.dev/courses/video) | Shoot, edit, and publish professional video content |
+| <img src="public/images/courses/audio.svg" width="20" /> | [Learn Audio Production](https://learn.neuman.dev/courses/audio) | Record, mix, and master music and podcasts |
+| <img src="public/images/courses/photography.svg" width="20" /> | [Learn Photography & Design](https://learn.neuman.dev/courses/photography) | Capture, edit, and create stunning visual content |
 
-Sections are collapsible so you can focus on what matters to you. The roadmap opens first to guide your journey.
-
----
-
-## 🟢 Active Courses
-
-**[Learn Python](https://learn.neuman.dev/courses/python)** is the first fully developed ndev.learn course — 274 projects across 13 levels, 12 modules, and 34 concept guides. Every concept is taught by building real projects with test suites to verify your work.
-
-All other courses are currently **coming soon** with curated resource pages available now. Each one is a comprehensive learning guide you can start using today while the full project-based curriculum is being developed.
+<br />
 
 ---
 
-## License
+<br />
 
-[MIT](LICENSE) — Travis Neuman
+## What's inside every course page
+
+<table>
+  <tr>
+    <td width="60" align="center">🗺️</td>
+    <td><strong>Learning Roadmap</strong> — Step-by-step path from beginner to mastery (opens first)</td>
+  </tr>
+  <tr>
+    <td align="center">📖</td>
+    <td><strong>Official Documentation</strong> — Primary sources and language references</td>
+  </tr>
+  <tr>
+    <td align="center">⭐</td>
+    <td><strong>GitHub Awesome Lists</strong> — Community-curated collections of the best tools and resources</td>
+  </tr>
+  <tr>
+    <td align="center">🧪</td>
+    <td><strong>Interactive Courses</strong> — Free hands-on platforms, university MOOCs, and coding challenges</td>
+  </tr>
+  <tr>
+    <td align="center">🎬</td>
+    <td><strong>Video Courses & YouTube</strong> — Structured playlists and top creator channels</td>
+  </tr>
+  <tr>
+    <td align="center">📚</td>
+    <td><strong>Books</strong> — Free online books and essential paid references</td>
+  </tr>
+  <tr>
+    <td align="center">👥</td>
+    <td><strong>Community & News</strong> — Forums, newsletters, and ecosystem resources</td>
+  </tr>
+  <tr>
+    <td align="center">🔧</td>
+    <td><strong>Tools & Environments</strong> — IDEs, playgrounds, and development tools</td>
+  </tr>
+</table>
+
+<br />
+
+> **Every section is collapsible.** Open what you need, skip what you don't. Resources are ordered from beginner to advanced within each section so you're never lost.
+
+<br />
+
+---
+
+<br />
+
+<p align="center">
+  <a href="https://learn.neuman.dev">
+    <img src="https://img.shields.io/badge/Start_Learning-learn.neuman.dev-f97316?style=for-the-badge&logoColor=white" alt="Start Learning" />
+  </a>
+</p>
+
+<p align="center">
+  <sub>MIT License — Built by <a href="https://travisjneuman.com">Travis Neuman</a></sub>
+</p>
