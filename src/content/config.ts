@@ -17,6 +17,7 @@ const courses = defineCollection({
       conceptGuides: z.number().optional(),
     }),
     tags: z.array(z.string()),
+    category: z.enum(['programming', 'technical', 'creative']),
     order: z.number(),
   }),
 });

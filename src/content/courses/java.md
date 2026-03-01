@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["Java", "Spring Boot", "Android", "Enterprise"]
+category: "programming"
 order: 4
 ---
 

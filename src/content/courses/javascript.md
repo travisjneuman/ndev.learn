@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["JavaScript", "TypeScript", "React", "Node.js", "Full-Stack"]
+category: "programming"
 order: 2
 ---
 

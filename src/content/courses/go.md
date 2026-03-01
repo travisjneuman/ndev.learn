@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["Go", "Cloud-Native", "Concurrency", "CLI", "Kubernetes"]
+category: "programming"
 order: 6
 ---
 

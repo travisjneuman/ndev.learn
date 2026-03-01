@@ -5,6 +5,24 @@ import CourseCard from './CourseCard.astro';
 const courses = (await getCollection('courses')).sort(
   (a, b) => a.data.order - b.data.order
 );
+
+const categories = [
+  {
+    key: 'programming',
+    title: 'Programming Languages',
+    description: 'Master a language from zero to production. Each course is project-based and self-paced.',
+  },
+  {
+    key: 'technical',
+    title: 'Technical Skills',
+    description: 'Essential tools and disciplines every developer needs beyond writing code.',
+  },
+  {
+    key: 'creative',
+    title: 'Creative Production',
+    description: 'Create professional visual and audio content with industry-standard tools.',
+  },
+] as const;
 ---
 
 <section id="courses" class="py-20 px-6">
@@ -16,23 +34,48 @@ const courses = (await getCollection('courses')).sort(
       Available Courses
     </h2>
     <p
-      class="text-center mb-12 max-w-xl mx-auto"
+      class="text-center mb-16 max-w-xl mx-auto"
       style="color: var(--color-text-muted);"
     >
       Project-based curricula designed for hands-on learning. Start from zero, build real things.
     </p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {courses.map((course) => (
-        <CourseCard
-          title={course.data.title}
-          subtitle={course.data.subtitle}
-          slug={course.id.replace(/\.md$/, '')}
-          status={course.data.status}
-          icon={course.data.icon}
-          color={course.data.color}
-          stats={course.data.stats}
-        />
-      ))}
-    </div>
+
+    {categories.map((cat) => {
+      const catCourses = courses.filter((c) => c.data.category === cat.key);
+      return catCourses.length > 0 ? (
+        <div class="mb-16 last:mb-0">
+          <div class="mb-6">
+            <h3
+              class="text-2xl font-bold mb-1"
+              style="color: var(--color-text);"
+            >
+              {cat.title}
+              <span
+                class="text-sm font-normal ml-2"
+                style="color: var(--color-text-subtle);"
+              >
+                {catCourses.length} {catCourses.length === 1 ? 'course' : 'courses'}
+              </span>
+            </h3>
+            <p class="text-sm" style="color: var(--color-text-muted);">
+              {cat.description}
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {catCourses.map((course) => (
+              <CourseCard
+                title={course.data.title}
+                subtitle={course.data.subtitle}
+                slug={course.id.replace(/\.md$/, '')}
+                status={course.data.status}
+                icon={course.data.icon}
+                color={course.data.color}
+                stats={course.data.stats}
+              />
+            ))}
+          </div>
+        </div>
+      ) : null;
+    })}
   </div>
 </section>

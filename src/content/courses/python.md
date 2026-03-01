@@ -12,6 +12,7 @@ stats:
   modules: 12
   conceptGuides: 34
 tags: ["Python", "Open Source", "Free", "pytest"]
+category: "programming"
 order: 1
 ---
 

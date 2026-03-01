@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["Swift", "SwiftUI", "iOS", "macOS", "Vapor"]
+category: "programming"
 order: 8
 ---
 

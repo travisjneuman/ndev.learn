@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["Dart", "Flutter", "Mobile", "Cross-Platform", "UI"]
+category: "programming"
 order: 7
 ---
 

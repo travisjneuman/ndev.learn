@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["PowerShell", "Automation", "Windows", "DevOps", "Azure"]
+category: "programming"
 order: 10
 ---
 

@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["C#", ".NET", "Unity", "ASP.NET", "Blazor"]
+category: "programming"
 order: 3
 ---
 

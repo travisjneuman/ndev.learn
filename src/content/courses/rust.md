@@ -11,6 +11,7 @@ stats:
   levels: 0
   modules: 0
 tags: ["Rust", "Systems", "WebAssembly", "CLI", "Concurrency"]
+category: "programming"
 order: 5
 ---
 
