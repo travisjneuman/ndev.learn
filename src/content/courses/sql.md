@@ -2,8 +2,8 @@
 title: "Learn SQL & Databases"
 subtitle: "Query, design, and optimize relational databases"
 status: "coming-soon"
-url: "https://sql.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.sql"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/sql.svg"
 color: "#336791"
 stats:

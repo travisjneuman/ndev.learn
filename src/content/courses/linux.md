@@ -2,8 +2,8 @@
 title: "Learn Linux & Command Line"
 subtitle: "Navigate, script, and administer Unix systems"
 status: "coming-soon"
-url: "https://linux.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.linux"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/linux.svg"
 color: "#FCC624"
 stats:

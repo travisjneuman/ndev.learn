@@ -37,3 +37,6 @@ desktop.ini
 
 # OS
 *.log
+
+# AI assistant config
+CLAUDE.md

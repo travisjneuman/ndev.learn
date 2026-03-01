@@ -2,8 +2,8 @@
 title: "Learn DevOps & Cloud"
 subtitle: "Docker, CI/CD, and infrastructure as code"
 status: "coming-soon"
-url: "https://devops.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.devops"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/devops.svg"
 color: "#2496ED"
 stats:

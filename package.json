@@ -2,6 +2,15 @@
   "name": "ndev.learn",
   "type": "module",
   "version": "0.0.1",
+  "description": "Learn programming, technical skills, and creative production — free curated roadmaps",
+  "license": "MIT",
+  "author": "Travis Neuman <https://travisjneuman.com>",
+  "homepage": "https://learn.neuman.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travisjneuman/ndev.learn.git"
+  },
+  "keywords": ["learning", "education", "programming", "free", "courses"],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -9,16 +18,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
     "@astrojs/cloudflare": "^12.6.12",
     "@astrojs/react": "^4.4.2",
     "@tailwindcss/vite": "^4.2.1",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "astro": "^5.17.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "tailwindcss": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "typescript": "^5.9.3"
   }
 }

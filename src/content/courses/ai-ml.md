@@ -2,8 +2,8 @@
 title: "Learn AI & Machine Learning"
 subtitle: "Neural networks, LLMs, and intelligent applications"
 status: "coming-soon"
-url: "https://ai-ml.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.ai-ml"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/ai-ml.svg"
 color: "#FF6F00"
 stats:

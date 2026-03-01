@@ -2,8 +2,8 @@
 title: "Learn Video Production"
 subtitle: "Shoot, edit, and publish professional video content"
 status: "coming-soon"
-url: "https://video.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.video"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/video.svg"
 color: "#9146FF"
 stats:

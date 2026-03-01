@@ -2,8 +2,8 @@
 title: "Learn JavaScript & TypeScript"
 subtitle: "Full-stack web from vanilla JS to React and Node.js"
 status: "coming-soon"
-url: "https://javascript.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.javascript"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/javascript.svg"
 color: "#F7DF1E"
 stats:

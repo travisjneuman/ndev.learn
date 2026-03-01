@@ -2,8 +2,8 @@
 title: "Learn Java"
 subtitle: "Enterprise backends, Android, and distributed systems"
 status: "coming-soon"
-url: "https://java.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.java"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/java.svg"
 color: "#ED8B00"
 stats:

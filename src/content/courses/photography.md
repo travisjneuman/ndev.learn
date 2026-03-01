@@ -2,8 +2,8 @@
 title: "Learn Photography & Design"
 subtitle: "Capture, edit, and create stunning visual content"
 status: "coming-soon"
-url: "https://photography.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.photography"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/photography.svg"
 color: "#31A8FF"
 stats:

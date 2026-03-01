@@ -2,8 +2,8 @@
 title: "Learn PowerShell"
 subtitle: "Automation, sysadmin, and infrastructure as code"
 status: "coming-soon"
-url: "https://powershell.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.powershell"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/powershell.svg"
 color: "#012456"
 stats:

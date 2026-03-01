@@ -2,8 +2,8 @@
 title: "Learn C#"
 subtitle: "Games, enterprise apps, and web with one language"
 status: "coming-soon"
-url: "https://csharp.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.csharp"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/csharp.svg"
 color: "#512BD4"
 stats:

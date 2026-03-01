@@ -2,8 +2,8 @@
 title: "Learn Kotlin"
 subtitle: "Android, backend, and multiplatform development"
 status: "coming-soon"
-url: "https://kotlin.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.kotlin"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/kotlin.svg"
 color: "#7F52FF"
 stats:

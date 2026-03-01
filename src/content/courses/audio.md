@@ -2,8 +2,8 @@
 title: "Learn Audio Production"
 subtitle: "Record, mix, and master music and podcasts"
 status: "coming-soon"
-url: "https://audio.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.audio"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/audio.svg"
 color: "#1DB954"
 stats:

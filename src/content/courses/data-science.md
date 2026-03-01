@@ -2,8 +2,8 @@
 title: "Learn Data Science"
 subtitle: "Analyze, visualize, and model real-world data"
 status: "coming-soon"
-url: "https://data-science.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.data-science"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/data-science.svg"
 color: "#150458"
 stats:

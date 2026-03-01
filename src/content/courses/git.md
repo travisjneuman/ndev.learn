@@ -2,8 +2,8 @@
 title: "Learn Git & Version Control"
 subtitle: "Branch, merge, and collaborate with confidence"
 status: "coming-soon"
-url: "https://git.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.git"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/git.svg"
 color: "#F05032"
 stats:

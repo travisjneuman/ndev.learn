@@ -2,8 +2,8 @@
 title: "Learn Cybersecurity"
 subtitle: "Defend systems, find vulnerabilities, think like an attacker"
 status: "coming-soon"
-url: "https://cybersecurity.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.cybersecurity"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/cybersecurity.svg"
 color: "#00B4D8"
 stats:

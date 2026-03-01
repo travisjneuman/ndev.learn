@@ -2,8 +2,8 @@
 title: "Learn Dart & Flutter"
 subtitle: "Mobile, web, and desktop from one codebase"
 status: "coming-soon"
-url: "https://dart.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.dart"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/dart.svg"
 color: "#0175C2"
 stats:

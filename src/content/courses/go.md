@@ -2,8 +2,8 @@
 title: "Learn Go"
 subtitle: "Cloud-native services, CLIs, and concurrent systems"
 status: "coming-soon"
-url: "https://go.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.go"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/go.svg"
 color: "#00ADD8"
 stats:

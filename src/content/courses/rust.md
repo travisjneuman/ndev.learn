@@ -2,8 +2,8 @@
 title: "Learn Rust"
 subtitle: "Memory-safe systems programming and WebAssembly"
 status: "coming-soon"
-url: "https://rust.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.rust"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/rust.svg"
 color: "#CE422B"
 stats:

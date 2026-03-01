@@ -2,8 +2,8 @@
 title: "Learn Swift"
 subtitle: "iOS, macOS, and server-side development"
 status: "coming-soon"
-url: "https://swift.learn.neuman.dev"
-github: "https://github.com/travisjneuman/learn.swift"
+url: "https://learn.neuman.dev"
+github: "https://github.com/travisjneuman/ndev.learn"
 icon: "/images/courses/swift.svg"
 color: "#F05138"
 stats:
