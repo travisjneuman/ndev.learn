@@ -104,8 +104,9 @@ const isActive = status === 'active';
 
       <!-- Course body (rendered markdown) -->
       <div
-        class="prose-custom space-y-4"
+        class:list={['prose-custom space-y-4', { 'coming-soon-layout': !isActive }]}
         style="color: var(--color-text-muted);"
+        data-course-color={color}
       >
         <Content />
       </div>
@@ -151,6 +152,7 @@ const isActive = status === 'active';
 </Base>
 
 <style>
+  /* ─── Active course prose (simple, clean) ─── */
   .prose-custom :global(h2) {
     font-size: 1.5rem;
     font-weight: 700;
@@ -183,4 +185,373 @@ const isActive = status === 'active';
   .prose-custom :global(li) {
     margin-bottom: 0.25rem;
   }
+
+  /* ─── Coming Soon course layout — transforms flat markdown into visual sections ─── */
+
+  /* Reset list style for coming-soon */
+  .coming-soon-layout :global(ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .coming-soon-layout :global(li) {
+    margin-bottom: 0;
+  }
+
+  /* First h2 + p = intro section, styled prominently */
+  .coming-soon-layout :global(h2:first-of-type) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-accent-yellow);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Section headings become collapsible card headers */
+  .coming-soon-layout :global(h2) {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    padding: 1rem 1.25rem;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem 0.75rem 0 0;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  /* Add chevron indicator to section headings */
+  .coming-soon-layout :global(h2)::before {
+    content: '▸';
+    font-size: 0.75rem;
+    color: var(--color-text-subtle);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .coming-soon-layout :global(h2.section-open)::before {
+    transform: rotate(90deg);
+  }
+
+  /* Don't chevron/card the first h2 (Coming Soon header) */
+  .coming-soon-layout :global(h2:first-of-type) {
+    padding: 0;
+    padding-bottom: 0.5rem;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    cursor: default;
+    display: block;
+  }
+
+  .coming-soon-layout :global(h2:first-of-type)::before {
+    content: none;
+  }
+
+  /* Section emoji icons by heading text (added via JS) */
+  .coming-soon-layout :global(h2 .section-icon) {
+    font-size: 1.125rem;
+    flex-shrink: 0;
+  }
+
+  /* Resource count badge */
+  .coming-soon-layout :global(h2 .section-count) {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-subtle);
+    background-color: var(--color-bg-muted);
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+  }
+
+  /* Content area under each h2 — the collapsible body */
+  .coming-soon-layout :global(.section-content) {
+    padding: 0.75rem 1.25rem 1.25rem;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-top: none;
+    border-radius: 0 0 0.75rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .coming-soon-layout :global(.section-content.collapsed) {
+    display: none;
+  }
+
+  /* Subcategory headings (h3) within sections */
+  .coming-soon-layout :global(h3) {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-subtle);
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.375rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .coming-soon-layout :global(h3:first-child) {
+    margin-top: 0.25rem;
+  }
+
+  /* Resource links become visual cards */
+  .coming-soon-layout :global(li) {
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.15s ease;
+    border: 1px solid transparent;
+  }
+
+  .coming-soon-layout :global(li:hover) {
+    background-color: var(--color-bg-card-hover);
+    border-color: var(--color-border-subtle);
+  }
+
+  .coming-soon-layout :global(li a) {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--color-accent-blue);
+  }
+
+  .coming-soon-layout :global(li a:hover) {
+    color: #60a5fa;
+  }
+
+  /* The " — description" part of each link */
+  .coming-soon-layout :global(li) {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+  }
+
+  /* Roadmap section — special numbered styling */
+  .coming-soon-layout :global(.roadmap-section ol) {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: roadmap-step;
+  }
+
+  .coming-soon-layout :global(.roadmap-section ol li) {
+    counter-increment: roadmap-step;
+    padding: 0.75rem 0.75rem 0.75rem 3rem;
+    position: relative;
+    border-left: 2px solid var(--color-border);
+    margin-left: 0.875rem;
+  }
+
+  .coming-soon-layout :global(.roadmap-section ol li)::before {
+    content: counter(roadmap-step);
+    position: absolute;
+    left: -0.9375rem;
+    top: 0.75rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--color-accent-blue);
+  }
+
+  .coming-soon-layout :global(.roadmap-section ol li:last-child) {
+    border-left-color: transparent;
+  }
+
+  .coming-soon-layout :global(.roadmap-section ol li strong) {
+    display: block;
+    font-size: 0.9375rem;
+    margin-bottom: 0.125rem;
+  }
+
+  /* Intro paragraph (first p after first h2) */
+  .coming-soon-layout :global(h2:first-of-type + p) {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Second paragraph after intro */
+  .coming-soon-layout :global(h2:first-of-type + p + p) {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text-subtle);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Expand/collapse all controls */
+  .section-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .section-controls button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    background: var(--color-bg-muted);
+    color: var(--color-text-subtle);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .section-controls button:hover {
+    background: var(--color-bg-card-hover);
+    color: var(--color-text-muted);
+  }
 </style>
+
+<script is:inline>
+  (function () {
+    var container = document.querySelector('.coming-soon-layout');
+    if (!container) return;
+
+    // Section heading icons based on content
+    var sectionIcons = {
+      'start here': '🗺️',
+      'learning roadmap': '🗺️',
+      'official': '📖',
+      'core documentation': '📖',
+      'github awesome': '⭐',
+      'curated collections': '⭐',
+      'interactive': '🧪',
+      'hands-on': '🧪',
+      'video': '🎬',
+      'youtube': '🎬',
+      'books': '📚',
+      'long-form': '📚',
+      'community': '👥',
+      'practice': '👥',
+      'news': '👥',
+      'tools': '🔧',
+      'environments': '🔧',
+      'free': '🆓',
+      'open source': '🆓',
+    };
+
+    function getIcon(text) {
+      var lower = text.toLowerCase();
+      for (var key in sectionIcons) {
+        if (lower.indexOf(key) !== -1) return sectionIcons[key];
+      }
+      return '📋';
+    }
+
+    // Get all h2 elements
+    var headings = container.querySelectorAll('h2');
+    var firstH2 = true;
+    var sections = [];
+
+    headings.forEach(function (h2) {
+      if (firstH2) {
+        firstH2 = false;
+        return; // Skip the "Coming Soon" heading
+      }
+
+      // Create section content wrapper
+      var contentDiv = document.createElement('div');
+      contentDiv.className = 'section-content';
+
+      // Collect all siblings until next h2
+      var sibling = h2.nextElementSibling;
+      var linkCount = 0;
+      while (sibling && sibling.tagName !== 'H2') {
+        var next = sibling.nextElementSibling;
+        linkCount += sibling.querySelectorAll('li').length;
+        contentDiv.appendChild(sibling);
+        sibling = next;
+      }
+
+      // Insert content div after h2
+      h2.insertAdjacentElement('afterend', contentDiv);
+
+      // Add icon to heading
+      var iconSpan = document.createElement('span');
+      iconSpan.className = 'section-icon';
+      iconSpan.textContent = getIcon(h2.textContent);
+      h2.insertBefore(iconSpan, h2.firstChild);
+
+      // Add count badge
+      if (linkCount > 0) {
+        var countSpan = document.createElement('span');
+        countSpan.className = 'section-count';
+        countSpan.textContent = linkCount + ' resources';
+        h2.appendChild(countSpan);
+      }
+
+      // Mark roadmap section
+      if (h2.textContent.toLowerCase().indexOf('roadmap') !== -1 ||
+          h2.textContent.toLowerCase().indexOf('start here') !== -1) {
+        contentDiv.classList.add('roadmap-section');
+        // Start roadmap open
+        h2.classList.add('section-open');
+      } else {
+        // Start other sections collapsed
+        contentDiv.classList.add('collapsed');
+      }
+
+      // Click to toggle
+      h2.addEventListener('click', function () {
+        h2.classList.toggle('section-open');
+        contentDiv.classList.toggle('collapsed');
+      });
+
+      sections.push({ h2: h2, content: contentDiv });
+    });
+
+    // Add expand/collapse all controls if there are sections
+    if (sections.length > 1) {
+      var controls = document.createElement('div');
+      controls.className = 'section-controls';
+
+      var expandBtn = document.createElement('button');
+      expandBtn.textContent = 'Expand All';
+      expandBtn.addEventListener('click', function () {
+        sections.forEach(function (s) {
+          s.h2.classList.add('section-open');
+          s.content.classList.remove('collapsed');
+        });
+      });
+
+      var collapseBtn = document.createElement('button');
+      collapseBtn.textContent = 'Collapse All';
+      collapseBtn.addEventListener('click', function () {
+        sections.forEach(function (s) {
+          s.h2.classList.remove('section-open');
+          s.content.classList.add('collapsed');
+        });
+      });
+
+      controls.appendChild(expandBtn);
+      controls.appendChild(collapseBtn);
+
+      // Insert controls before the first section h2
+      if (sections[0]) {
+        sections[0].h2.parentNode.insertBefore(controls, sections[0].h2);
+      }
+    }
+
+    // Open all external links in new tab
+    container.querySelectorAll('a[href^="http"]').forEach(function (a) {
+      a.setAttribute('target', '_blank');
+      a.setAttribute('rel', 'noopener noreferrer');
+    });
+  })();
+</script>
