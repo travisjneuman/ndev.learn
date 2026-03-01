@@ -16,17 +16,31 @@ interface Props {
 const { title, subtitle, slug, status, icon, color, stats } = Astro.props;
 const isActive = status === 'active';
 const href = isActive ? `/courses/${slug}` : undefined;
-const statusColor = isActive ? 'var(--color-accent-green)' : color;
+const statusColor = isActive ? '#39ff14' : '#facc15';
 ---
 
 <div
-  class="group rounded-xl p-6 transition-colors flex flex-col"
+  class="group rounded-xl p-6 transition-colors flex flex-col relative"
   style={`
     background-color: var(--color-bg-card);
     border: 1px solid var(--color-border);
     height: 100%;
   `}
 >
+  <span
+    class="status-dot absolute"
+    style={`
+      top: 12px;
+      right: 12px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: ${statusColor};
+      box-shadow: 0 0 8px ${statusColor};
+    `}
+    title={isActive ? 'Active' : 'Coming Soon'}
+  />
+
   <div class="flex items-start gap-4">
     <div
       class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -34,23 +48,10 @@ const statusColor = isActive ? 'var(--color-accent-green)' : color;
     >
       <img src={icon} alt={`${title} logo`} class="w-7 h-7" />
     </div>
-    <div class="flex-1 min-w-0">
-      <div class="flex items-center gap-2 mb-1">
-        <h3 class="text-lg font-semibold" style="color: var(--color-text);">
-          {title}
-        </h3>
-        <span
-          class="status-dot flex-shrink-0"
-          style={`
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: ${statusColor};
-            box-shadow: 0 0 6px ${statusColor};
-          `}
-          title={isActive ? 'Active' : 'Coming Soon'}
-        />
-      </div>
+    <div class="flex-1 min-w-0 pr-4">
+      <h3 class="text-lg font-semibold mb-1" style="color: var(--color-text);">
+        {title}
+      </h3>
       <p class="text-sm" style="color: var(--color-text-muted);">
         {subtitle}
       </p>
@@ -94,7 +95,7 @@ const statusColor = isActive ? 'var(--color-accent-green)' : color;
       <a
         href={href}
         class="inline-flex items-center justify-center w-full py-2.5 text-sm font-semibold rounded-lg no-underline transition-colors"
-        style={`background-color: ${statusColor}; color: #fff;`}
+        style={`background-color: ${statusColor}; color: #000;`}
       >
         View Course
       </a>
