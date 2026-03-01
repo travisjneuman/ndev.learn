@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content';
+import CourseCard from './CourseCard.astro';
+
+const courses = (await getCollection('courses')).sort(
+  (a, b) => a.data.order - b.data.order
+);
+---
+
+<section id="courses" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2
+      class="text-3xl sm:text-4xl font-bold text-center mb-4"
+      style="color: var(--color-text);"
+    >
+      Available Courses
+    </h2>
+    <p
+      class="text-center mb-12 max-w-xl mx-auto"
+      style="color: var(--color-text-muted);"
+    >
+      Project-based curricula designed for hands-on learning. Start from zero, build real things.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {courses.map((course) => (
+        <CourseCard
+          title={course.data.title}
+          subtitle={course.data.subtitle}
+          slug={course.id.replace(/\.md$/, '')}
+          status={course.data.status}
+          icon={course.data.icon}
+          color={course.data.color}
+          stats={course.data.stats}
+        />
+      ))}
+    </div>
+  </div>
+</section>

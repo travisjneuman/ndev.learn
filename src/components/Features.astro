@@ -1,0 +1,73 @@
+---
+const features = [
+  {
+    title: 'Project-Based',
+    description: 'No lectures or slides. Every concept is taught by building something real. Learn by doing, not by watching.',
+    icon: '{}',
+  },
+  {
+    title: 'Self-Paced',
+    description: 'Go at your own speed. Work through projects in order or jump to topics that interest you. No deadlines.',
+    icon: '\u23F1',
+  },
+  {
+    title: 'Open Source',
+    description: 'All course content is MIT-licensed and available on GitHub. Fork it, modify it, contribute to it.',
+    icon: '\u2728',
+  },
+  {
+    title: 'Free Forever',
+    description: 'No subscriptions, no paywalls, no "premium" tiers. Quality programming education should be accessible to everyone.',
+    icon: '\u2764',
+  },
+  {
+    title: 'Test-Driven',
+    description: 'Every project includes a test suite. Run pytest or the relevant test runner to verify your solution is correct.',
+    icon: '\u2713',
+  },
+  {
+    title: 'Solution Walkthroughs',
+    description: 'Stuck? Each project has an annotated solution explaining the reasoning behind the implementation.',
+    icon: '\uD83D\uDCA1',
+  },
+];
+---
+
+<section class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h2
+      class="text-3xl sm:text-4xl font-bold text-center mb-4"
+      style="color: var(--color-text);"
+    >
+      Why Learn Here
+    </h2>
+    <p
+      class="text-center mb-14 max-w-xl mx-auto"
+      style="color: var(--color-text-muted);"
+    >
+      Built by engineers, for engineers. Focused on what actually matters.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature) => (
+        <div
+          class="rounded-xl p-6"
+          style="background-color: var(--color-bg-card); border: 1px solid var(--color-border);"
+        >
+          <div class="text-2xl mb-3">{feature.icon}</div>
+          <h3
+            class="text-base font-semibold mb-2"
+            style="color: var(--color-text);"
+          >
+            {feature.title}
+          </h3>
+          <p
+            class="text-sm leading-relaxed"
+            style="color: var(--color-text-muted);"
+          >
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

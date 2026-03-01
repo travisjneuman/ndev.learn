@@ -1,0 +1,188 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const courses = await getCollection('courses');
+  return courses.map((course) => ({
+    params: { slug: course.id.replace(/\.md$/, '') },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { Content } = await course.render();
+const { title, subtitle, status, github, icon, color, stats, tags } = course.data;
+const isActive = status === 'active';
+---
+
+<Base title={title} description={subtitle}>
+  <section class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <!-- Back link -->
+      <a
+        href="/"
+        class="inline-flex items-center gap-1 text-sm mb-8 no-underline"
+        style="color: var(--color-text-muted);"
+      >
+        &larr; All Courses
+      </a>
+
+      <!-- Course header -->
+      <div class="flex items-start gap-5 mb-8">
+        <div
+          class="w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0"
+          style={`background-color: ${color}15;`}
+        >
+          <img src={icon} alt={`${title} logo`} class="w-10 h-10" />
+        </div>
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <h1 class="text-3xl sm:text-4xl font-bold" style="color: var(--color-text);">
+              {title}
+            </h1>
+            {isActive ? (
+              <span
+                class="text-xs font-medium px-2.5 py-1 rounded-full"
+                style="background-color: var(--color-accent-green); color: #000;"
+              >
+                Active
+              </span>
+            ) : (
+              <span
+                class="text-xs font-medium px-2.5 py-1 rounded-full"
+                style="background-color: var(--color-accent-yellow); color: #000;"
+              >
+                Coming Soon
+              </span>
+            )}
+          </div>
+          <p class="text-lg" style="color: var(--color-text-muted);">
+            {subtitle}
+          </p>
+        </div>
+      </div>
+
+      <!-- Stats grid (active courses only) -->
+      {isActive && (
+        <div
+          class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-10 p-6 rounded-xl"
+          style="background-color: var(--color-bg-card); border: 1px solid var(--color-border);"
+        >
+          <div>
+            <div class="text-3xl font-bold" style={`color: ${color};`}>{stats.projects}</div>
+            <div class="text-sm" style="color: var(--color-text-subtle);">Projects</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold" style={`color: ${color};`}>{stats.levels}</div>
+            <div class="text-sm" style="color: var(--color-text-subtle);">Levels</div>
+          </div>
+          <div>
+            <div class="text-3xl font-bold" style={`color: ${color};`}>{stats.modules}</div>
+            <div class="text-sm" style="color: var(--color-text-subtle);">Modules</div>
+          </div>
+          {stats.conceptGuides && (
+            <div>
+              <div class="text-3xl font-bold" style={`color: ${color};`}>{stats.conceptGuides}</div>
+              <div class="text-sm" style="color: var(--color-text-subtle);">Concept Guides</div>
+            </div>
+          )}
+        </div>
+      )}
+
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        {tags.map((tag) => (
+          <span
+            class="text-xs font-medium px-3 py-1 rounded-full"
+            style="background-color: var(--color-bg-muted); color: var(--color-text-muted); border: 1px solid var(--color-border);"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <!-- Course body (rendered markdown) -->
+      <div
+        class="prose-custom space-y-4"
+        style="color: var(--color-text-muted);"
+      >
+        <Content />
+      </div>
+
+      <!-- CTAs -->
+      <div
+        class="mt-12 pt-8 flex flex-col sm:flex-row gap-4"
+        style="border-top: 1px solid var(--color-border);"
+      >
+        {isActive ? (
+          <>
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg no-underline transition-colors"
+              style={`background-color: ${color}; color: #fff;`}
+            >
+              Start on GitHub
+            </a>
+            <a
+              href="https://travisjneuman.github.io/learn.python"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg no-underline transition-colors"
+              style="border: 1px solid var(--color-border); color: var(--color-text);"
+            >
+              View Documentation
+            </a>
+          </>
+        ) : (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold rounded-lg no-underline transition-colors"
+            style="border: 1px solid var(--color-border); color: var(--color-text);"
+          >
+            Follow on GitHub
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose-custom :global(h2) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-custom :global(h3) {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-custom :global(p) {
+    line-height: 1.75;
+  }
+
+  .prose-custom :global(strong) {
+    color: var(--color-text);
+  }
+
+  .prose-custom :global(ul) {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+
+  .prose-custom :global(li) {
+    margin-bottom: 0.25rem;
+  }
+</style>

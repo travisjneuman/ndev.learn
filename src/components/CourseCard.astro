@@ -1,0 +1,112 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  slug: string;
+  status: 'active' | 'coming-soon';
+  icon: string;
+  color: string;
+  stats: {
+    projects: number;
+    levels: number;
+    modules: number;
+  };
+}
+
+const { title, subtitle, slug, status, icon, color, stats } = Astro.props;
+const isActive = status === 'active';
+const href = isActive ? `/courses/${slug}` : undefined;
+---
+
+<div
+  class="group rounded-xl p-6 transition-colors"
+  style={`
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+  `}
+>
+  <div class="flex items-start gap-4">
+    <div
+      class="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+      style={`background-color: ${color}15;`}
+    >
+      <img src={icon} alt={`${title} logo`} class="w-7 h-7" />
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-center gap-2 mb-1">
+        <h3 class="text-lg font-semibold" style="color: var(--color-text);">
+          {title}
+        </h3>
+        {isActive ? (
+          <span
+            class="text-xs font-medium px-2 py-0.5 rounded-full"
+            style="background-color: var(--color-accent-green); color: #000;"
+          >
+            Active
+          </span>
+        ) : (
+          <span
+            class="text-xs font-medium px-2 py-0.5 rounded-full"
+            style="background-color: var(--color-accent-yellow); color: #000;"
+          >
+            Coming Soon
+          </span>
+        )}
+      </div>
+      <p class="text-sm" style="color: var(--color-text-muted);">
+        {subtitle}
+      </p>
+    </div>
+  </div>
+
+  {isActive && (
+    <div
+      class="mt-5 grid grid-cols-3 gap-4 pt-4"
+      style="border-top: 1px solid var(--color-border-subtle);"
+    >
+      <div>
+        <div class="text-2xl font-bold" style={`color: ${color};`}>
+          {stats.projects}
+        </div>
+        <div class="text-xs" style="color: var(--color-text-subtle);">
+          Projects
+        </div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold" style={`color: ${color};`}>
+          {stats.levels}
+        </div>
+        <div class="text-xs" style="color: var(--color-text-subtle);">
+          Levels
+        </div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold" style={`color: ${color};`}>
+          {stats.modules}
+        </div>
+        <div class="text-xs" style="color: var(--color-text-subtle);">
+          Modules
+        </div>
+      </div>
+    </div>
+  )}
+
+  <div class="mt-5">
+    {isActive ? (
+      <a
+        href={href}
+        class="inline-flex items-center justify-center w-full py-2.5 text-sm font-semibold rounded-lg no-underline transition-colors"
+        style={`background-color: ${color}; color: #fff;`}
+      >
+        View Course
+      </a>
+    ) : (
+      <div
+        class="inline-flex items-center justify-center w-full py-2.5 text-sm font-medium rounded-lg"
+        style="background-color: var(--color-bg-muted); color: var(--color-text-subtle); cursor: default;"
+      >
+        In Development
+      </div>
+    )}
+  </div>
+</div>
