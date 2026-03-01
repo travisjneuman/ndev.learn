@@ -382,42 +382,7 @@ const isActive = status === 'active';
     margin-bottom: 1.5rem;
   }
 
-  /* Expand/collapse all controls */
-  .section-controls {
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-    margin-top: 1.25rem;
-  }
-
-  .section-controls button {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-  }
-
-  .section-controls button:first-child {
-    background: var(--color-accent-blue);
-    color: #fff;
-  }
-
-  .section-controls button:first-child:hover {
-    background: #60a5fa;
-  }
-
-  .section-controls button:last-child {
-    background: var(--color-accent-purple);
-    color: #fff;
-  }
-
-  .section-controls button:last-child:hover {
-    background: #c084fc;
-  }
+  /* Expand/collapse controls are styled inline via JS (Astro scoping doesn't reach dynamic elements) */
 </style>
 
 <script is:inline>
@@ -521,10 +486,15 @@ const isActive = status === 'active';
     // Add expand/collapse all controls if there are sections
     if (sections.length > 1) {
       var controls = document.createElement('div');
-      controls.className = 'section-controls';
+      controls.style.cssText = 'display:flex;justify-content:flex-end;gap:0.75rem;margin-bottom:1rem;margin-top:1.25rem;';
+
+      var btnBase = 'font-size:0.8125rem;font-weight:600;padding:0.5rem 1.25rem;border-radius:0.5rem;cursor:pointer;border:none;transition:all 0.2s ease;';
 
       var expandBtn = document.createElement('button');
       expandBtn.textContent = 'Expand All';
+      expandBtn.style.cssText = btnBase + 'background:#3b82f6;color:#fff;';
+      expandBtn.addEventListener('mouseenter', function () { expandBtn.style.background = '#60a5fa'; });
+      expandBtn.addEventListener('mouseleave', function () { expandBtn.style.background = '#3b82f6'; });
       expandBtn.addEventListener('click', function () {
         sections.forEach(function (s) {
           s.h2.classList.add('section-open');
@@ -534,6 +504,9 @@ const isActive = status === 'active';
 
       var collapseBtn = document.createElement('button');
       collapseBtn.textContent = 'Collapse All';
+      collapseBtn.style.cssText = btnBase + 'background:#a855f7;color:#fff;';
+      collapseBtn.addEventListener('mouseenter', function () { collapseBtn.style.background = '#c084fc'; });
+      collapseBtn.addEventListener('mouseleave', function () { collapseBtn.style.background = '#a855f7'; });
       collapseBtn.addEventListener('click', function () {
         sections.forEach(function (s) {
           s.h2.classList.remove('section-open');
