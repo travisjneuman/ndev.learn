@@ -53,7 +53,7 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 | <img src="public/images/courses/javascript.svg" width="20" /> | [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
 | <img src="public/images/courses/csharp.svg" width="20" /> | [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
 | <img src="public/images/courses/java.svg" width="20" /> | [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
-| <img src="public/images/courses/rust.svg" width="20" /> | [Learn Rust](https://learn.neuman.dev/courses/rust) | Memory-safe systems programming and WebAssembly |
+| <img src="public/images/courses/rust.svg" width="20" /> | [Learn Rust](https://learn.neuman.dev/courses/rust) | Memory-safe systems programming, CLIs, web services, and WebAssembly |
 | <img src="public/images/courses/go.svg" width="20" /> | [Learn Go](https://learn.neuman.dev/courses/go) | Cloud-native services, CLIs, and concurrent systems |
 | <img src="public/images/courses/dart.svg" width="20" /> | [Learn Dart & Flutter](https://learn.neuman.dev/courses/dart) | Cross-platform mobile, web, and desktop apps |
 | <img src="public/images/courses/swift.svg" width="20" /> | [Learn Swift](https://learn.neuman.dev/courses/swift) | iOS, macOS, and Apple platform development |
