@@ -1,5 +1,11 @@
 # AGENTS.md — ndev.learn
 
+## Workspace storage conservation
+
+<!-- workspace-scratch-storage-contract-v1 -->
+Use only this repository's existing canonical live checkout. A dirty, divergent, detached, ambiguous, or concurrently owned checkout is a blocker: preserve it and stop. Do not create a clone, fork, worktree, feature branch, full repository/workspace copy, or external dependency/build environment to bypass that blocker. Never place repositories, worktrees, workspace copies, package installations, builds, or development servers under `/tmp` or `/private/tmp`, including aliases that resolve there. Small, bounded non-repository temporary files remain allowed. Load the Agent Operating Layer `workspace-scratch-storage-policy` contract through the workspace registry when available.
+
+
 > Codex-native project instructions for ndev.learn. The legacy sibling guidance file is retained for other tools, but Codex should read this file directly.
 > Neuman Learn: multi-course learning platform hub.
 > **Global rules from `C:\Users\tjn\.codex\AGENTS.md` and the workspace `E:\Web Development\AGENTS.md` apply automatically.**
