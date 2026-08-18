@@ -17,6 +17,13 @@
 | **Deploy** | Cloudflare Workers (`@astrojs/cloudflare`) |
 | **License** | MIT |
 
+## Cloudflare non-Lazy boundary
+
+- Load `~/.codex/docs/CLOUDFLARE-SAFETY.md` before any Cloudflare, Worker, Wrangler, MCP, API, billing, or publication action.
+- This is not Lazy Golfing. Preserve its provider-confirmed existing Worker target; normal maintenance and deployment through that established path are allowed when the current task explicitly requests publication.
+- Never delete or destructively remove Cloudflare state and never enable paid/billing features.
+- Routine publication uses the existing GitHub-connected source workflow under the repository completion rules, followed by one bounded provider receipt/readback. Do not duplicate it with direct Wrangler; direct publication requires an exact current-task request or approved recovery procedure. New resources, products, environments, bindings, schedules, or materially higher expected consumption require Travis's separate exact approval. Preserve current authentication unchanged.
+
 ---
 
 ## Architecture
