@@ -1,13 +1,13 @@
 ---
 title: "Learn Python"
-subtitle: "Zero to production in 274 projects"
+subtitle: "Zero to production in 250+ projects"
 status: "active"
 url: "https://python.learn.neuman.dev"
 github: "https://github.com/travisjneuman/learn.python"
 icon: "/images/courses/python.svg"
 color: "#3776AB"
 stats:
-  projects: 274
+  projects: 250
   levels: 13
   modules: 12
   conceptGuides: 34
@@ -22,7 +22,7 @@ A complete, hands-on Python curriculum that takes you from zero programming expe
 
 ## What You'll Build
 
-- **274 hands-on projects** across 13 progressive levels
+- **250+ hands-on projects** across 13 progressive levels
 - **12 technology modules** covering web frameworks, databases, APIs, testing, and more
 - **10 elite-track capstones** for staff-engineer-level challenges
 - **34 concept guides** with visual diagrams and real-world examples

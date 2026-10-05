@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://learn.neuman.dev"><img src="https://img.shields.io/badge/🌐_Visit-learn.neuman.dev-3b82f6?style=for-the-badge" alt="Live Site" /></a>&nbsp;
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge" alt="MIT License" /></a>&nbsp;
-  <a href="https://learn.neuman.dev/courses/python"><img src="https://img.shields.io/badge/🐍_Python-274_Projects-3776AB?style=for-the-badge" alt="Python Course" /></a>&nbsp;
+  <a href="https://learn.neuman.dev/courses/python"><img src="https://img.shields.io/badge/🐍_Python-250%2B_Projects-3776AB?style=for-the-badge" alt="Python Course" /></a>&nbsp;
   <a href="https://github.com/travisjneuman/ndev.learn/actions/workflows/deploy.yml"><img src="https://github.com/travisjneuman/ndev.learn/actions/workflows/deploy.yml/badge.svg" alt="Deploy" /></a>
 </p>
 
@@ -49,7 +49,7 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 | | Course | What You'll Learn |
 |:---:|--------|-------------------|
-| <img src="public/images/courses/python.svg" width="20" /> | **[Learn Python](https://learn.neuman.dev/courses/python)** | **274 projects across 13 levels** — the first active ndev.learn course |
+| <img src="public/images/courses/python.svg" width="20" /> | **[Learn Python](https://learn.neuman.dev/courses/python)** | **250+ projects across 13 levels** — the first active ndev.learn course |
 | <img src="public/images/courses/javascript.svg" width="20" /> | [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
 | <img src="public/images/courses/csharp.svg" width="20" /> | [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
 | <img src="public/images/courses/java.svg" width="20" /> | [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
