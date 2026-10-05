@@ -1,0 +1,43 @@
+{
+  "$schema": "https://raw.githubusercontent.com/travisjneuman/travisjneuman/main/showcase/schema/showcase-v1.json",
+  "id": "ndev-learn",
+  "name": "ndev.learn",
+  "status": "active",
+  "statusNote": null,
+  "summary": "Free, open-source learning platform with course roadmaps and curated resources across programming, technical, and creative skills.",
+  "visibility": "public",
+  "links": {
+    "live": "https://learn.neuman.dev",
+    "repo": "https://github.com/travisjneuman/ndev.learn"
+  },
+  "stack": [
+    "Astro",
+    "TypeScript",
+    "Tailwind CSS",
+    "Cloudflare Workers"
+  ],
+  "metrics": [
+    {
+      "value": "20",
+      "label": "Courses",
+      "source": "ls src/content/courses/*.md | wc -l",
+      "round": "exact",
+      "asOf": "2026-10-05"
+    },
+    {
+      "value": "1,500+",
+      "label": "Resources",
+      "source": "grep -ohE 'https?://[^ )\"\\'>]+' src/content/courses/* | wc -l (1,574 on 2026-10-05)",
+      "round": "floor-2sig",
+      "asOf": "2026-10-05"
+    },
+    {
+      "value": "3",
+      "label": "Categories",
+      "source": "manual: category enum in src/content/config.ts",
+      "round": "exact",
+      "asOf": "2026-10-05"
+    }
+  ],
+  "updated": "2026-10-05"
+}
