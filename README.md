@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <strong>Learn programming, technical skills, and creative production — for free.</strong>
+  <strong>Learn programming, technical skills, and creative production, all free.</strong>
 </p>
 
 <p align="center">
@@ -19,14 +19,14 @@
 
 ## 20 courses. 3 categories. Zero to mastery.
 
-Every course page is a **complete learning roadmap** — hand-picked resources organized from beginner to advanced so you always know exactly where to start and what comes next.
+Every course page is a **complete learning roadmap**: hand-picked resources organized from beginner to advanced so you always know exactly where to start and what comes next.
 
 ### Why ndev.learn?
 
-- **One place, every resource** — a curated map of the best free learning materials across the internet
-- **Structured for progression** — ordered beginner → advanced with a step-by-step roadmap
-- **Free and open** — no paywalls, no ads, MIT licensed (accounts coming later for progress tracking)
-- **Actively maintained** — new resources added, dead links removed, community contributions welcome
+- **One place, every resource**: a curated map of the best free learning materials across the internet
+- **Structured for progression**: ordered beginner → advanced with a step-by-step roadmap
+- **Free and open**: no paywalls, no ads, MIT licensed (accounts coming later for progress tracking)
+- **Actively maintained**: new resources added, dead links removed, community contributions welcome
 
 ### Where to Start
 
@@ -39,17 +39,17 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 | Break into cybersecurity | [Linux](https://learn.neuman.dev/courses/linux) → [Cybersecurity](https://learn.neuman.dev/courses/cybersecurity) |
 | Create content (video / audio / photo) | Pick your medium in [Creative Production](#creative-production) below |
 
-> **How it works:** Pick a topic. Follow the roadmap. Each section is collapsible so you can focus on what matters to you — official docs, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and development tools.
+> **How it works:** Pick a topic. Follow the roadmap. Each section is collapsible so you can focus on what matters to you: official docs, free interactive courses, YouTube channels, books, GitHub awesome lists, community forums, and development tools.
 
 <br />
 
 ## Programming Languages
 
-> 10 languages from web to systems to mobile — start with fundamentals, build real projects.
+> 10 languages from web to systems to mobile. Start with fundamentals, build real projects.
 
 | | Course | What You'll Learn |
 |:---:|--------|-------------------|
-| <img src="public/images/courses/python.svg" width="20" /> | **[Learn Python](https://learn.neuman.dev/courses/python)** | **250+ projects across 13 levels** — the first active ndev.learn course |
+| <img src="public/images/courses/python.svg" width="20" /> | **[Learn Python](https://learn.neuman.dev/courses/python)** | **250+ projects across 13 levels**, the first active ndev.learn course |
 | <img src="public/images/courses/javascript.svg" width="20" /> | [Learn JavaScript & TypeScript](https://learn.neuman.dev/courses/javascript) | Full-stack web from vanilla JS to React and Node.js |
 | <img src="public/images/courses/csharp.svg" width="20" /> | [Learn C#](https://learn.neuman.dev/courses/csharp) | .NET, Unity, and enterprise applications |
 | <img src="public/images/courses/java.svg" width="20" /> | [Learn Java](https://learn.neuman.dev/courses/java) | Enterprise systems, Android, and Spring Boot |
@@ -64,7 +64,7 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 ## Technical Skills
 
-> The tools and knowledge that tie everything together — databases, infrastructure, security, and AI.
+> The tools and knowledge that tie everything together: databases, infrastructure, security, and AI.
 
 | | Course | What You'll Learn |
 |:---:|--------|-------------------|
@@ -80,7 +80,7 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 ## Creative Production
 
-> Go beyond code — learn to create professional video, audio, and visual content.
+> Go beyond code and learn to create professional video, audio, and visual content.
 
 | | Course | What You'll Learn |
 |:---:|--------|-------------------|
@@ -99,35 +99,35 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 <table>
   <tr>
     <td width="60" align="center">🗺️</td>
-    <td><strong>Learning Roadmap</strong> — Step-by-step path from beginner to mastery (opens first)</td>
+    <td><strong>Learning Roadmap</strong>: Step-by-step path from beginner to mastery (opens first)</td>
   </tr>
   <tr>
     <td align="center">📖</td>
-    <td><strong>Official Documentation</strong> — Primary sources and language references</td>
+    <td><strong>Official Documentation</strong>: Primary sources and language references</td>
   </tr>
   <tr>
     <td align="center">⭐</td>
-    <td><strong>GitHub Awesome Lists</strong> — Community-curated collections of the best tools and resources</td>
+    <td><strong>GitHub Awesome Lists</strong>: Community-curated collections of the best tools and resources</td>
   </tr>
   <tr>
     <td align="center">🧪</td>
-    <td><strong>Interactive Courses</strong> — Free hands-on platforms, university MOOCs, and coding challenges</td>
+    <td><strong>Interactive Courses</strong>: Free hands-on platforms, university MOOCs, and coding challenges</td>
   </tr>
   <tr>
     <td align="center">🎬</td>
-    <td><strong>Video Courses & YouTube</strong> — Structured playlists and top creator channels</td>
+    <td><strong>Video Courses & YouTube</strong>: Structured playlists and top creator channels</td>
   </tr>
   <tr>
     <td align="center">📚</td>
-    <td><strong>Books</strong> — Free online books and essential paid references</td>
+    <td><strong>Books</strong>: Free online books and essential paid references</td>
   </tr>
   <tr>
     <td align="center">👥</td>
-    <td><strong>Community & News</strong> — Forums, newsletters, and ecosystem resources</td>
+    <td><strong>Community & News</strong>: Forums, newsletters, and ecosystem resources</td>
   </tr>
   <tr>
     <td align="center">🔧</td>
-    <td><strong>Tools & Environments</strong> — IDEs, playgrounds, and development tools</td>
+    <td><strong>Tools & Environments</strong>: IDEs, playgrounds, and development tools</td>
   </tr>
 </table>
 
@@ -141,9 +141,9 @@ Every course page is a **complete learning roadmap** — hand-picked resources o
 
 This project is actively growing. Here's what's on the roadmap:
 
-- **More project-based courses** — expanding depth across all 20 topics
-- **Progress tracking & user accounts** — save your place, track completions
-- **In-browser code editor** — practice without leaving the site
+- **More project-based courses**: expanding depth across all 20 topics
+- **Progress tracking & user accounts**: save your place, track completions
+- **In-browser code editor**: practice without leaving the site
 
 <br />
 
@@ -158,9 +158,9 @@ This project is actively growing. Here's what's on the roadmap:
 </p>
 
 <p align="center">
-  If this helped you, consider giving it a <strong>star</strong> — it helps others find these resources too.
+  If this helped you, consider giving it a <strong>star</strong>. It helps others find these resources too.
 </p>
 
 <p align="center">
-  <sub>MIT License — Built by <a href="https://travisjneuman.com">Travis Neuman</a> · <a href="https://learn.neuman.dev">learn.neuman.dev</a></sub>
+  <sub>MIT License · Built by <a href="https://travisjneuman.com">Travis Neuman</a> · <a href="https://learn.neuman.dev">learn.neuman.dev</a></sub>
 </p>
