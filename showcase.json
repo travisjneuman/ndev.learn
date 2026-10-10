@@ -18,26 +18,29 @@
   ],
   "metrics": [
     {
+      "key": "courses",
       "value": "20",
       "label": "Courses",
-      "source": "ls src/content/courses/*.md | wc -l",
+      "source": "manual: github.com/travisjneuman/ndev.learn at 00441d15b657d2ee049fddc4db1b1de83e3f32e3; enumerated 20 Markdown course files in src/content/courses/*.md; reviewed tracked source inventory, not deployed content",
       "round": "exact",
-      "asOf": "2026-10-05"
+      "asOf": "2026-10-10"
     },
     {
+      "key": "resources",
       "value": "1,500+",
       "label": "Resources",
-      "source": "grep -ohE 'https?://[^ )\"\\'>]+' src/content/courses/* | wc -l (1,574 on 2026-10-05)",
+      "source": "manual: github.com/travisjneuman/ndev.learn at 00441d15b657d2ee049fddc4db1b1de83e3f32e3; 1,574 HTTP(S) URL-token link occurrences in src/content/courses/*.md using the historical delimiter rule (space, closing parenthesis, double quote, single quote, or greater-than terminates a token); includes frontmatter links and repeats within/across courses, NOT unique resources. 1,448 distinct exact tokens, no URL normalization or reachability lookup; rounded occurrence display retained",
       "round": "floor-2sig",
-      "asOf": "2026-10-05"
+      "asOf": "2026-10-10"
     },
     {
+      "key": "categories",
       "value": "3",
       "label": "Categories",
-      "source": "manual: category enum in src/content/config.ts",
+      "source": "manual: github.com/travisjneuman/ndev.learn at 00441d15b657d2ee049fddc4db1b1de83e3f32e3; reviewed category z.enum in src/content/config.ts, SHA256 49d65be9615a7df96ed98aa032cb5b157b039b08a5514f255af9761106eb41ca; programming, technical, creative",
       "round": "exact",
-      "asOf": "2026-10-05"
+      "asOf": "2026-10-10"
     }
   ],
-  "updated": "2026-10-05"
+  "updated": "2026-10-10"
 }
